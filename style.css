@@ -24,14 +24,14 @@
   --glass-border-hover: rgba(216, 155, 170, 0.4);
   
   --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4);
-  --glass-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.9), 0 0 35px -10px rgba(216, 155, 170, 0.1);
+  --glass-shadow: 0 28px 55px -15px rgba(0, 0, 0, 0.9), 0 0 38px -10px rgba(216, 155, 170, 0.1);
   
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   --transition-smooth: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-  --radius-container: 24px;
-  --radius-btn: 15px;
+  --radius-container: 26px;
+  --radius-btn: 16px;
   --radius-social: 9999px;
 }
 
@@ -63,7 +63,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: env(safe-area-inset-top, 16px) 14px env(safe-area-inset-bottom, 16px) 14px;
+  padding: env(safe-area-inset-top, 20px) 16px env(safe-area-inset-bottom, 20px) 16px;
   background-image: 
     radial-gradient(circle at 50% 0%, rgba(216, 155, 170, 0.12) 0%, transparent 60%),
     radial-gradient(circle at 50% 100%, rgba(245, 214, 220, 0.06) 0%, transparent 50%);
@@ -82,36 +82,36 @@ body {
 .glow-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.55;
+  filter: blur(95px);
+  opacity: 0.58;
   animation: floatOrb 14s infinite ease-in-out alternate;
 }
 
 .glow-orb-1 {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   background: radial-gradient(circle, rgba(216, 155, 170, 0.25) 0%, transparent 70%);
-  top: -60px;
+  top: -70px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .glow-orb-2 {
-  width: 240px;
-  height: 240px;
+  width: 260px;
+  height: 260px;
   background: radial-gradient(circle, rgba(245, 214, 220, 0.15) 0%, transparent 70%);
   bottom: 5%;
-  left: 15%;
+  left: 18%;
   animation-duration: 18s;
   animation-delay: -5s;
 }
 
 .glow-orb-3 {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   background: radial-gradient(circle, rgba(180, 120, 133, 0.15) 0%, transparent 70%);
   top: 45%;
-  right: 10%;
+  right: 12%;
   animation-duration: 16s;
   animation-delay: -9s;
 }
@@ -121,10 +121,10 @@ body {
     transform: translateY(0) scale(1);
   }
   50% {
-    transform: translateY(20px) scale(1.06);
+    transform: translateY(22px) scale(1.07);
   }
   100% {
-    transform: translateY(-16px) scale(0.95);
+    transform: translateY(-18px) scale(0.95);
   }
 }
 
@@ -148,7 +148,7 @@ body {
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   margin: auto;
 }
 
@@ -161,7 +161,7 @@ body {
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-container);
   box-shadow: var(--glass-shadow);
-  padding: 24px 18px 20px 18px;
+  padding: 28px 22px 24px 22px;
   overflow: hidden;
   box-shadow: var(--glass-specular), var(--glass-shadow);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -185,18 +185,18 @@ body {
 
 .profile-header {
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .logo-frame {
   position: relative;
-  width: 78px;
-  height: 78px;
-  margin: 0 auto 10px auto;
+  width: 86px;
+  height: 86px;
+  margin: 0 auto 12px auto;
   border-radius: 50%;
   padding: 2.5px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, var(--rose-gold) 50%, rgba(216, 155, 170, 0.2) 100%);
-  box-shadow: 0 8px 20px -4px rgba(216, 155, 170, 0.35);
+  box-shadow: 0 8px 22px -4px rgba(216, 155, 170, 0.35);
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -225,12 +225,12 @@ body {
 
 .brand-title {
   font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-size: 1.95rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.17em;
   text-transform: uppercase;
   line-height: 1.15;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   background: linear-gradient(135deg, #FFFFFF 20%, var(--rose-gold-light) 60%, var(--rose-gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -238,7 +238,7 @@ body {
 
 .brand-tagline {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 300;
   color: #BDBDBD;
   letter-spacing: 0.05em;
@@ -252,8 +252,8 @@ body {
 .links-stack {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .glass-btn {
@@ -262,7 +262,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-radius: var(--radius-btn);
   text-decoration: none;
   color: #FFFFFF;
@@ -286,16 +286,16 @@ body {
 .btn-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
 }
 
 .btn-icon {
-  font-size: 1.2rem;
+  font-size: 1.28rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
 }
 
@@ -306,15 +306,15 @@ body {
 }
 
 .btn-title {
-  font-size: 0.8125rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
   line-height: 1.25;
 }
 
 .btn-subtitle {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.02em;
@@ -325,13 +325,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--rose-gold-light);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   transition: var(--transition-smooth);
   flex-shrink: 0;
 }
@@ -340,8 +340,8 @@ body {
 .btn-primary-cta {
   background: linear-gradient(135deg, rgba(216, 155, 170, 0.24) 0%, rgba(245, 214, 220, 0.14) 40%, rgba(26, 26, 26, 0.8) 100%);
   border: 1px solid rgba(216, 155, 170, 0.55);
-  box-shadow: 0 8px 20px -5px rgba(216, 155, 170, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.35);
-  padding: 13.5px 16px;
+  box-shadow: 0 9px 22px -5px rgba(216, 155, 170, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.35);
+  padding: 15.5px 18px;
 }
 
 .btn-primary-cta .btn-title {
@@ -364,11 +364,11 @@ body {
   transform: translateY(-2.5px) scale(1.012);
   background: linear-gradient(135deg, rgba(216, 155, 170, 0.32) 0%, rgba(245, 214, 220, 0.2) 40%, rgba(32, 32, 32, 0.85) 100%);
   border-color: var(--rose-gold-light);
-  box-shadow: 0 12px 28px -6px rgba(216, 155, 170, 0.45), inset 0 1px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 13px 30px -6px rgba(216, 155, 170, 0.45), inset 0 1px 3px rgba(255, 255, 255, 0.5);
 }
 
 .btn-primary-cta:hover .btn-arrow {
-  transform: translateX(3px);
+  transform: translateX(3.5px);
   background: #FFFFFF;
 }
 
@@ -380,30 +380,30 @@ body {
 .cta-badge {
   position: absolute;
   top: -1px;
-  right: 14px;
+  right: 16px;
   background: linear-gradient(135deg, var(--rose-gold) 0%, var(--rose-gold-dark) 100%);
   color: #070707;
-  font-size: 0.54rem;
+  font-size: 0.56rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 2.5px 7px;
-  border-radius: 0 0 6px 6px;
-  box-shadow: 0 2px 6px rgba(216, 155, 170, 0.35);
+  letter-spacing: 0.14em;
+  padding: 2.5px 7.5px;
+  border-radius: 0 0 7px 7px;
+  box-shadow: 0 2px 7px rgba(216, 155, 170, 0.35);
 }
 
 /* --- SECONDARY CTA (SHOP PRODUCTS / SERVICES) --- */
 .btn-secondary-cta {
   background: var(--glass-card-bg);
   border: 1px solid rgba(255, 255, 255, 0.09);
-  box-shadow: 0 4px 14px -3px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+  box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.12);
 }
 
 .btn-secondary-cta:hover {
   transform: translateY(-2px);
   background: var(--glass-card-hover);
   border-color: rgba(216, 155, 170, 0.4);
-  box-shadow: 0 8px 20px -4px rgba(216, 155, 170, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 9px 22px -4px rgba(216, 155, 170, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.2);
 }
 
 .btn-secondary-cta:hover .btn-arrow {
@@ -420,14 +420,14 @@ body {
 .btn-tertiary-cta {
   background: rgba(18, 18, 18, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px -3px rgba(0, 0, 0, 0.4);
 }
 
 .btn-tertiary-cta:hover {
   transform: translateY(-2px);
   background: var(--glass-card-bg);
   border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 6px 16px -3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 7px 18px -3px rgba(0, 0, 0, 0.6);
 }
 
 .btn-tertiary-cta:hover .btn-arrow {
@@ -444,31 +444,31 @@ body {
    ========================================================================== */
 
 .whatsapp-container {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .btn-whatsapp {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 9px;
   width: 100%;
-  padding: 10.5px 14px;
+  padding: 12px 16px;
   background: rgba(37, 211, 102, 0.08);
   border: 1px solid rgba(37, 211, 102, 0.22);
   border-radius: var(--radius-btn);
   text-decoration: none;
   color: #E0E0E0;
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   font-weight: 500;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.035em;
   text-transform: uppercase;
   transition: var(--transition-smooth);
 }
 
 .whatsapp-icon {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   fill: #25D366;
   flex-shrink: 0;
   transition: transform 0.3s ease;
@@ -479,7 +479,7 @@ body {
   border-color: #25D366;
   color: #FFFFFF;
   transform: translateY(-1.5px);
-  box-shadow: 0 6px 16px -4px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 7px 18px -4px rgba(37, 211, 102, 0.25);
 }
 
 .btn-whatsapp:hover .whatsapp-icon {
@@ -497,16 +497,16 @@ body {
 .social-section {
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding-top: 14px;
+  padding-top: 18px;
 }
 
 .social-label {
-  font-size: 0.65rem;
+  font-size: 0.67rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.19em;
   color: var(--rose-gold);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   display: block;
 }
 
@@ -514,15 +514,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 15px;
 }
 
 .social-icon-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: var(--radius-social);
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -532,8 +532,8 @@ body {
 }
 
 .social-icon-btn svg {
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   fill: currentColor;
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -543,7 +543,7 @@ body {
   border-color: var(--rose-gold);
   color: #FFFFFF;
   transform: translateY(-2.5px) scale(1.08);
-  box-shadow: 0 6px 16px -3px rgba(216, 155, 170, 0.3);
+  box-shadow: 0 7px 18px -3px rgba(216, 155, 170, 0.3);
 }
 
 .social-icon-btn:hover svg {
@@ -560,8 +560,8 @@ body {
 
 .hub-footer {
   text-align: center;
-  margin-top: 14px;
-  font-size: 0.65rem;
+  margin-top: 18px;
+  font-size: 0.67rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.35);
   letter-spacing: 0.04em;
@@ -634,46 +634,46 @@ body {
 
 @media (max-width: 380px) {
   .glass-container {
-    padding: 20px 14px 16px 14px;
-    border-radius: 20px;
+    padding: 22px 16px 18px 16px;
+    border-radius: 22px;
   }
   
   .brand-title {
-    font-size: 1.55rem;
+    font-size: 1.65rem;
   }
   
   .brand-tagline {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
   }
   
   .glass-btn {
-    padding: 10.5px 12px;
-  }
-  
-  .btn-primary-cta {
     padding: 12px 14px;
   }
   
+  .btn-primary-cta {
+    padding: 13.5px 14px;
+  }
+  
   .btn-icon {
-    font-size: 1.1rem;
-    width: 24px;
-    height: 24px;
+    font-size: 1.15rem;
+    width: 26px;
+    height: 26px;
   }
   
   .btn-title {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
   }
   
   .btn-subtitle {
-    font-size: 0.62rem;
+    font-size: 0.64rem;
   }
   
   .social-icons-row {
-    gap: 10px;
+    gap: 12px;
   }
   
   .social-icon-btn {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
   }
 }
