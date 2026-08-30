@@ -615,12 +615,12 @@ body {
     rgba(255, 255, 255, 0) 100%
   );
   transform: rotate(25deg);
-  animation: buttonShimmer 6s infinite ease-in-out;
+  animation: buttonShimmer 2.5s infinite ease-in-out;
   pointer-events: none;
 }
 
 @keyframes buttonShimmer {
-  0%, 70% {
+  0%, 55% {
     left: -60%;
   }
   100% {
