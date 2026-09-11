@@ -198,6 +198,43 @@ body {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, var(--rose-gold) 50%, rgba(216, 155, 170, 0.2) 100%);
   box-shadow: 0 8px 22px -4px rgba(216, 155, 170, 0.35);
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: logoPop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.05s both;
+}
+
+.logo-frame::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid var(--rose-gold);
+  opacity: 0;
+  animation: auraRipple 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+  pointer-events: none;
+}
+
+@keyframes logoPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.65) translateY(-8px);
+  }
+  70% {
+    transform: scale(1.06) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes auraRipple {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
 }
 
 .logo-frame:hover {
@@ -593,26 +630,49 @@ body {
 }
 
 /* ==========================================================================
-   ANIMATIONS & ENTRANCES
+   FAST LUXURY ENTRANCE ANIMATIONS
    ========================================================================== */
 
 .fade-in-up {
   opacity: 0;
-  transform: translateY(16px);
-  animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform: translateY(20px) scale(0.97);
+  animation: fastFadeInUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
 }
 
-.delay-1 { animation-delay: 0.08s; }
-.delay-2 { animation-delay: 0.16s; }
-.delay-3 { animation-delay: 0.24s; }
-.delay-4 { animation-delay: 0.32s; }
-.delay-5 { animation-delay: 0.40s; }
-.delay-6 { animation-delay: 0.48s; }
+.delay-1 { animation-delay: 0.04s; }
+.delay-2 { animation-delay: 0.09s; }
+.delay-3 { animation-delay: 0.15s; }
+.delay-4 { animation-delay: 0.21s; }
+.delay-5 { animation-delay: 0.27s; }
+.delay-6 { animation-delay: 0.33s; }
 
-@keyframes fadeInUp {
-  to {
+@keyframes fastFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Glass Container Fast Intro Pop */
+.glass-container {
+  animation: glassContainerIntro 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes glassContainerIntro {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
   }
 }
 
