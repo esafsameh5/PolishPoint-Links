@@ -198,7 +198,7 @@ body {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, var(--rose-gold) 50%, rgba(216, 155, 170, 0.2) 100%);
   box-shadow: 0 8px 22px -4px rgba(216, 155, 170, 0.35);
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  animation: logoPop 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 0.08s both;
+  animation: logoPop 1.05s cubic-bezier(0.34, 1.56, 0.64, 1) 0.12s both;
 }
 
 .logo-frame::after {
@@ -208,7 +208,7 @@ body {
   border-radius: 50%;
   border: 1.5px solid var(--rose-gold);
   opacity: 0;
-  animation: auraRipple 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+  animation: auraRipple 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
   pointer-events: none;
 }
 
@@ -630,27 +630,27 @@ body {
 }
 
 /* ==========================================================================
-   SILKY LUXURY ENTRANCE ANIMATIONS
+   CINEMATIC LUXURY ENTRANCE ANIMATIONS
    ========================================================================== */
 
 .fade-in-up {
   opacity: 0;
-  transform: translateY(22px) scale(0.97);
-  animation: silkyFadeInUp 0.68s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform: translateY(26px) scale(0.96);
+  animation: cinematicFadeInUp 0.95s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   will-change: transform, opacity;
 }
 
-.delay-1 { animation-delay: 0.08s; }
-.delay-2 { animation-delay: 0.16s; }
-.delay-3 { animation-delay: 0.24s; }
-.delay-4 { animation-delay: 0.32s; }
-.delay-5 { animation-delay: 0.40s; }
-.delay-6 { animation-delay: 0.48s; }
+.delay-1 { animation-delay: 0.15s; }
+.delay-2 { animation-delay: 0.30s; }
+.delay-3 { animation-delay: 0.45s; }
+.delay-4 { animation-delay: 0.60s; }
+.delay-5 { animation-delay: 0.75s; }
+.delay-6 { animation-delay: 0.90s; }
 
-@keyframes silkyFadeInUp {
+@keyframes cinematicFadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(22px) scale(0.97);
+    transform: translateY(26px) scale(0.96);
   }
   100% {
     opacity: 1;
@@ -658,16 +658,16 @@ body {
   }
 }
 
-/* Glass Container Silky Intro */
+/* Glass Container Cinematic Intro */
 .glass-container {
-  animation: glassContainerIntro 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: glassContainerIntro 1.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes glassContainerIntro {
   0% {
     opacity: 0;
-    transform: translateY(14px) scale(0.95);
-    filter: blur(6px);
+    transform: translateY(18px) scale(0.93);
+    filter: blur(8px);
   }
   100% {
     opacity: 1;
